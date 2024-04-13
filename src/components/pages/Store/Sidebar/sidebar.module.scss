@@ -1,0 +1,136 @@
+
+
+    .sidebar{
+        // position: sticky;
+        // top: 110px;
+        width: 300px;
+
+        &_card{
+            margin-top: 0px;
+            // padding: 5px; 
+            border-radius: 10px !important; 
+            margin-bottom: 40px;
+
+            &_heading{
+                font-size: 15px; 
+                line-height: 17px;
+                color: 444444;
+                font-weight: bold;
+                letter-spacing: 1px;
+                position: relative;
+                padding-bottom: 20px; 
+                // margin-bottom: 30px;
+              
+            }
+
+
+            &_catList{
+            //     text-decoration: none;
+            &_catItem{
+                padding: 10px; 
+                // border: 1px solid rgba(0,0,0,0.050); 
+                cursor: pointer;
+                margin: 10px 0px; 
+                border-radius: 4px; 
+                transition:all 0.3s ease-in-out;
+                display: flex;
+                justify-content: space-between;
+
+                &_product{
+                    font-size: 16px;
+                    color: #707070;
+                    font-weight: 200;
+                    cursor: pointer;
+                }
+
+                &_num{
+                    border: 1px solid #dee2e6 !important;
+                    border-radius: 5px;
+                    padding: 0 13px;
+                }
+
+
+                }
+            }
+
+            &_priceRange{
+                display: flex;
+                justify-content: space-between;
+
+                &_btn{
+                    font-size: 14px;
+                    line-height: 16px;
+                    font-weight: bold;
+                    color: #fff;
+                    letter-spacing: 1px;
+                    min-width:  100px;
+                    background-color: #5ba515;
+                    padding: 10px 15px;
+                    border: none;
+                    border-radius: 40px;
+
+
+
+                }
+            
+            &_price{
+                display: flex;
+                align-items: center;
+                gap: 3px;
+            }
+
+        }
+
+        &_recentList {
+            display: grid;
+            row-gap: 30px;
+            &_item{
+                display: flex;
+                // align-items: center;
+                // margin-top: 10px;
+
+                &_product{
+                padding-left: 10px;
+
+                &_title{
+                    font-weight: 400;
+                    font-size: 15px;
+                    line-height: 17px;
+                    letter-spacing: 1px;
+                    color: #444444;
+                    
+                }
+
+                &_price{
+                    font-weight: bold;
+                    font-size: 15px;
+                    line-height: 17px;
+                    color: #27272f;
+
+                }
+
+            }
+
+            }
+        }
+
+
+        &_tagNavList{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            &_item{
+                color: #707070;
+                letter-spacing: 1px;
+                padding: 7px 14px 9px 17px;
+                border: 1px solid #ebebeb;
+                border-radius: 40px;
+            }
+        }
+
+        }
+
+    }
+
+  
+  
