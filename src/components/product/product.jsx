@@ -8,7 +8,21 @@ import { SlEye } from "react-icons/sl";
 import { FaArrowRightArrowLeft } from "react-icons/fa6";
 import data from "../../data";
 
-const product = ( props) => {
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../../redux/slice/CartSlice';
+
+const product = ( props, {data}) => {
+  const dispatch = useDispatch()
+
+  const handleAddToCart = () => {
+    // console.log(data)
+    dispatch(addToCart({
+        ...data,
+        quantity: 1
+    }))
+    alert("Successfully!")
+}
+
 
 
   return (
@@ -22,33 +36,33 @@ const product = ( props) => {
         <div className={classes.productThumb_imgWrapper}>
           <img src={props.img} alt="" />
           <div className={classes.productThumb_imgWrapper_overlay}>
-            <ul className={classes.productThumb_imgWrapper_overlay_list}>
-              <li className={classes.productThumb_imgWrapper_overlay_list_item}>
+            <div className={classes.productThumb_imgWrapper_overlay_list}>
+              <button className={classes.productThumb_imgWrapper_overlay_list_item}>
                 <Link className={classes.productThumb_imgWrapper_overlay_list_item_cursor}>
                 <IoMdHeartEmpty/>
                 </Link>
-              </li>
+              </button>
 
-              <li className={classes.productThumb_imgWrapper_overlay_list_item}>
+              <button className={classes.productThumb_imgWrapper_overlay_list_item}>
                 <NavLink  to={"/pages"} className={classes.productThumb_imgWrapper_overlay_list_item_cursor}>
-                <PiShoppingCartLight />  
+                <PiShoppingCartLight  onClick={handleAddToCart} />  
                 </NavLink>
-              </li>
+              </button>
 
-              <li className={classes.productThumb_imgWrapper_overlay_list_item}>
+              <button className={classes.productThumb_imgWrapper_overlay_list_item}>
                 <Link className={classes.productThumb_imgWrapper_overlay_list_item_cursor}>
                 <SlEye/>
                 </Link>
-              </li>
+              </button>
 
-              <li className={classes.productThumb_imgWrapper_overlay_list_item}>
+              <button className={classes.productThumb_imgWrapper_overlay_list_item}>
                 <Link className={classes.productThumb_imgWrapper_overlay_list_item_cursor}>
                 <FaArrowRightArrowLeft/>
                 </Link>
-              </li>
+              </button>
 
               
-            </ul>
+            </div>
        
           
         </div>

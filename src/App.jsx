@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import './App.css';
-import "./responsive.module.scss"
 import { BrowserRouter,  Routes, Route } from 'react-router-dom';
 import Header from "./components/common/Header/Header";
 import Footer from "./components/common/Footer/Footer";
@@ -52,6 +51,7 @@ const App = () => {
 
 
       </Routes>
+    
       <Footer/>
       {/* </Provider> */}
       </BrowserRouter>

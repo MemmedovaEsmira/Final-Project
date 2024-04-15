@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import Product from '../../../product/product';
 import PartnerSlider from '../../../PartnerSlider/PartnerSlider';
 import Slider from 'react-slick'
@@ -29,13 +29,17 @@ import { PiRecycleLight } from "react-icons/pi";
 import { IoCallOutline } from "react-icons/io5";
 import { FaArrowRight } from "react-icons/fa";
 import data from '../../../../data';
+import productData from "../../../../data"
 
 
 import { Style } from 'react-style-tag';
 
 
 
+
+
 const Home = () => {
+
 
   let settings = {
     dots: true,
@@ -49,8 +53,53 @@ const Home = () => {
 
 
   
+  const [timer, setTimer] = useState("00:00:00")
+  const Ref =  useRef()
+
+  function  getTimeRemaining(e) {
+    const total = Date.parse(e) - Date.parse(new Date())
+    const hour = Math.floor((total /1000 * 60 * 60) %24);
+    const seconds = Math.floor((total / 1000) %60);
+    const minute = Math.floor((total / 1000/ 60) %60);
+    
+    return{total, hour, minute, seconds}
+  }
+
+  
+  function startTimer(e) {
+    let { total, hour,minute, seconds} = getTimeRemaining(e)
+    if(total >=0) {
+      setTimer(
+        (hour > 9 ? hour : '0' + hour) + ':' +
+        (minute > 9 ? minute : '0' + minute) + ':' +
+        (seconds > 9 ? seconds : '0' + seconds) 
+      )
+    }
+  }
+
+  function clearTimer(e){
+    setTimer("00:00:00")
+    if(Ref.current) clearInterval(Ref.current);
+    const id = setInterval(()=>{
+      startTimer(e)
+
+    }, 1000)
+    Ref.current = id;
+
+  }
+
+  function getDeadTime(){
+    let deadline = new Date();
+    deadline.setSeconds(deadline.getSeconds() +10);
+    return deadline;
+  }
+
+  useEffect(()=>{
+    clearTimer(getDeadTime())
+  },[])
 
   return (
+
     <>
 
 
@@ -111,9 +160,7 @@ const Home = () => {
        </div>
       </section>
       </div>
-      {/* <div className={classes.container}>
-        </div> */}
-
+ 
 
      <div className={classes.container}>       
       <section className={classes.productRow}>
@@ -130,11 +177,11 @@ const Home = () => {
 
         </div>
         <div className={classes.productRow_bottom}>
-          {data.productData.map((item,index)=>{
+          {data.productData.map((item,id)=>{
             return(
               <div className={classes.productRow_bottom_item}>
 
-                <Product img={item.img} title={item.title} price={item.price} oldprice={item.oldprice} key={index}/>
+                <Product img={item.img} title={item.title} price={item.price} oldprice={item.oldprice} key={id}/>
                  </div>
             )
 
@@ -144,34 +191,6 @@ const Home = () => {
         </div>
 
 
-
-        {/* <div className={classes.productRow_bottom_item}>
-        <Product className={Style.hot} tag="hot"/>
-        </div>
-        <div className={classes.productRow_bottom_item}>
-        <Product />
-        </div>
-        <div className={classes.productRow_bottom_item}>
-        <Product  className={Style.sale} tag="sale"/>
-        </div>
-        <div className={classes.productRow_bottom_item}>
-        <Product/>
-        </div>
-        <div className={classes.productRow_bottom_item}>
-        <Product tag="sale"/>
-        </div>
-        <div className={classes.productRow_bottom_item}>
-        <Product/>
-        </div>
-        <div className={classes.productRow_bottom_item}>
-        <Product tag="sale"/>
-        </div>
-        <div className={classes.productRow_bottom_item}>
-         <Product/>
-        </div>
-        <div className={classes.productRow_bottom_item}>
-        <Product tag="hot"/>
-        </div> */}
         </div>
       </section>
       </div>
@@ -259,9 +278,9 @@ const Home = () => {
           </span>
           <p className={classes.dealSecHolder_mainHeader_info}>There are many variations of passages of lorem ipsum available.</p>
 
+            <h3>{timer}</h3>
             </header>
 
-          {/* <div></div> */}
 
           <div className={classes.dealSecHolder_dealSlider }>
 
@@ -277,53 +296,7 @@ const Home = () => {
 
           })}
 
-            
-            {/* <div className={classes.dealSecHolder_dealSlider_prodSlider_item}>
-            <Product tag="sale "/>
-            </div>
 
-            <div className={classes.dealSecHolder_dealSlider_prodSlider_item}>
-            <Product />
-            </div>
-
-            <div className={classes.dealSecHolder_dealSlider_prodSlider_item}>
-            <Product tag="sale"/>
-            </div>
-
-            <div className={classes.dealSecHolder_dealSlider_prodSlider_item}>
-            <Product/>
-            </div>
-
-            <div className={classes.dealSecHolder_dealSlider_prodSlider_item}>
-            <Product tag="hot"/>
-            </div>
-
-            <div className={classes.dealSecHolder_dealSlider_prodSlider_item}>
-            <Product/>
-            </div>
-
-            <div className={classes.dealSecHolder_dealSlider_prodSlider_item}>
-            <Product/>
-            </div>
-
-            <div className={classes.dealSecHolder_dealSlider_prodSlider_item}>
-            <Product tag="sale"/>
-            </div>
-
-            <div className={classes.dealSecHolder_dealSlider_prodSlider_item}>
-            <Product />
-            </div>
-          
-            <div className={classes.dealSecHolder_dealSlider_prodSlider_item}>
-            <Product tag="sale"/>
-            </div>
-
-            <div className={classes.dealSecHolder_dealSlider_prodSlider_item}>
-            <Product />
-            </div> */}
-            {/* <Product tag="sale"/>
-            <Product tag="sale"/>
-            <Product tag="sale"/> */}
 
 
         </Slider>

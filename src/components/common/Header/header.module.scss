@@ -22,6 +22,12 @@
 
 
 .header{
+    width: 90%;
+    position: fixed;
+    z-index: 10;
+
+
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -133,4 +139,98 @@
 .icon:hover {
    color: rgb(222, 222, 222);
    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.navbarToggle{
+    display: none;
+}
+
+
+
+
+@media only screen and (min-width:320px) and (max-width:992px){
+
+    .header{
+        width: 100% !important;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        
+        &_menu{
+            width: 100% !important;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            right: -100px;
+            // background-color: #fff;
+            z-index: 100;
+            display: grid;
+            
+            &_item{
+                width: 100% !important;
+                margin: 0px !important;
+                text-align: left !important;
+                justify-content: flex-start !important;
+                // display: grid;
+                
+                &--link{
+                    width: 100% !important;
+                    
+                    // height: 100%;
+                    text-align: left !important;
+                    display: flex !important;
+                    align-items: center;
+
+                    justify-content: space-between !important;
+                    font-size: 14px;
+                    font-weight: 700;
+                    padding: 10px 15px;
+                    cursor: pointer;
+
+                }
+
+                &--link:hover{
+                    background-color: #000;
+                    color: #5ba515;
+
+                }
+
+            }
+        }
+
+        &_icons{
+            display: none;
+        }
+        
+    }
+
+        .navbarToggle{
+            width: 60px;
+            height: 60px;
+            font-size: 30px;
+            display: contents;
+    
+        }
+
 }

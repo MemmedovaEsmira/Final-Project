@@ -1,57 +1,83 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 
-const initialState = {
-    msg:"",
-    user:"",
-    token:"",
-    loading:false,
-    error: ""
-
-}
 
 
-export const  signUpUser = createAsyncThunk("signupuser", async()=>{
-const res = await fetch("ddddddddd",{
-    method: "post",
-    headers:{
-        "Content-Type": "application/json"
-    },
-    body: JSON.stringify(body)
-})
-return await res.json();
-})
 
 
-export const  signInUser = createAsyncThunk("signinuser", async()=>{
-    const res = await fetch("http://104.215.249.5:5000/api/login",{
-        method: "post",
-        headers:{
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(body)
-    })
-    return await res.json();
-    })
 
-const authSlice = createSlice({
-    name: "user",
-    initialState,
 
-    reducers:{
 
-     addToken: (state,action)=>{
-        state.token = localStorage.getItem("token")
-     },
 
-     addUser: (state,action)=>{
-        state.user = localStorage.getItem("user")
-     },
-     logout: (state,action)=>{
-         state.token = null;
-         localStorage.clear();    
-     }
-    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+
+
+// const initialState = {
+//     msg:"",
+//     user:"",
+//     token:"",
+//     loading:false,
+//     error: ""
+
+// }
+
+
+// export const  signUpUser = createAsyncThunk("signupuser", async()=>{
+// const res = await fetch("ddddddddd",{
+//     method: "post",
+//     headers:{
+//         "Content-Type": "application/json"
+//     },
+//     body: JSON.stringify(body)
+// })
+// return await res.json();
+// })
+
+
+// export const  signInUser = createAsyncThunk("signinuser", async()=>{
+//     const res = await fetch("http://104.215.249.5:5000/api/login",{
+//         method: "post",
+//         headers:{
+//             "Content-Type": "application/json"
+//         },
+//         body: JSON.stringify(body)
+//     })
+//     return await res.json();
+//     })
+
+// const authSlice = createSlice({
+//     name: "user",
+//     initialState,
+
+//     reducers:{
+
+//      addToken: (state,action)=>{
+//         state.token = localStorage.getItem("token")
+//      },
+
+//      addUser: (state,action)=>{
+//         state.user = localStorage.getItem("user")
+//      },
+//      logout: (state,action)=>{
+//          state.token = null;
+//          localStorage.clear();    
+//      }
+//     },
 //     extraReducers:{
 // //login
 //         [signInUser.pending]: (state,action)=>{
@@ -100,9 +126,9 @@ const authSlice = createSlice({
 //         state.loading = true
 //     }
 //     }
-})
+// })
 
 
-export const{ addToken, addUser, logout} = authSlice.actions
+// export const{ addToken, addUser, logout} = authSlice.actions
 
-export default authSlice.reducer
+// export default authSlice.reducer

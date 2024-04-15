@@ -1,66 +1,25 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import classes from "./pages.module.scss";
 import { Link } from 'react-router-dom';
 import { FaArrowRight } from "react-icons/fa";
 import img7 from "../../../assets/images/b-bg7.jpg";
 import img2 from "../../../assets/images/hbdr.png";
-// import CartBtn from '../../buttons/CartBtn';
 
-// import { useSelector } from 'react-redux'
-// import { useDispatch } from 'react-redux'
-// // import {delItem} from '../../../redux/actions/index'
-// import { NavLink } from 'react-router-dom'
+import CartItem from "../../CartItem/CartItem"
+
 
 
 const Pages = () => {
 
-//   const state = useSelector((state)=> state.addItem)
-//   const dispatch = useDispatch()
+  const cart = useSelector(state => state.cart)
+  console.log(cart)
 
-//   const handleClose = (item) => {
-//       dispatch(delItem(item))
-//   }
+  
 
-//   const cartItems = (cartItem) => {
-//     return(
-//         <div className={classes.container} key={cartItem.id}>
-//             <div className={classes.container }>
-//                 <button onClick={()=>handleClose(cartItem)} className={classes.btn-close} ></button>
-//                 <div className={classes.row }>
-//                     <div className={classes.col}>
-//                         <img src={cartItem.img} alt={cartItem.title} />
-//                     </div>
-//                     <div className={classes.col}>
-//                         <h3>{cartItem.title}</h3>
-//                         <p className={classes.lead}>${cartItem.price}</p>
-//                     </div>
-//                 </div>
-//             </div>
-//         </div>
-//     );
-// }
 
-// const emptyCart = () => {
-//   return (
-   
-//           <div className={classes.container}>
-//               <div className={classes.row}>
-//                   <h3>Your Cart is Empty</h3>
-//               </div>
-//               </div>
-       
-//   );
-// }
 
-// const button = () => {
-//   return(
-//       <div className={classes.container}>
-//           <div className={classes.row}>
-//               <NavLink to="/checkout" className={classes.btn}>Proceed To checkout</NavLink>
-//           </div>
-//       </div>
-//   );
-// }
+  
   return (
     <div>
 
@@ -94,11 +53,44 @@ const Pages = () => {
 
       </div>
       </section>
+   
 
-      {/* {state.length === 0 && emptyCart()}
-            {state.length !== 0 && state.map(cartItems)}
-            {state.length !== 0 && button()} */}
-  
+
+
+  <div className={classes.container}>
+  <div className={classes.row}>
+      {cart?.list && cart?.list?.length > 0 ? (
+          <div>
+              <header>
+                  <tr>
+                      <th>Name</th>
+                      <th>Price</th>
+                      <th>Quantity</th>
+                      <th>Total</th>
+                      <th>Action</th>
+                  </tr>
+              </header>
+              <div >
+                  {
+                      cart?.list.map(item => {
+                          return (
+                              <CartItem 
+                                  key={item?.id}
+                                  data={item}
+                              />
+                          )
+                      })
+                  }
+                  <tr>
+                      <td colSpan={3}>Total:</td>
+                      <td colSpan={1}>{cart?.total}$</td>
+                      <td></td>
+                  </tr>
+              </div>
+          </div>
+      ) : <h1>Empty</h1>}
+  </div >
+</div>
 
       <div className={classes.container}>       
       <section className={classes.newsLetterSection}>

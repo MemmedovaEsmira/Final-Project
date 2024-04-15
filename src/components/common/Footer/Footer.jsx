@@ -18,7 +18,7 @@ import { IoLogoGoogleplus } from "react-icons/io";
 
 const footer = () => {
   return <>
-<footer className={classes.footer}>
+{/* <footer className={classes.footer}>
 
   <div className={classes.container}>
     <div className={classes.footer_row}>
@@ -52,7 +52,6 @@ const footer = () => {
 
 
       <div className={classes.footer_row_part2}>
-        {/* <div className={classes.footer_row_part2_}>  */}
           <div className={classes.footer_row_part2_col}>
             <h3>INFORMATION</h3>
             <ul class={classes.footer_row_part2_col_list}>
@@ -88,7 +87,6 @@ const footer = () => {
 
           
 
-        {/* </div> */}
       </div>
 
 
@@ -101,7 +99,7 @@ const footer = () => {
   </div>
 
 </div>
-</footer>
+</footer> */}
   
   </>
 }
