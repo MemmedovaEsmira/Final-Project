@@ -21,9 +21,6 @@ import { FaPinterest } from "react-icons/fa";
 import { IoLogoGoogleplus } from "react-icons/io";
 
 
-
-
-
 import { FaArrowRight } from "react-icons/fa";
 
 import classes from "./details.module.scss";
@@ -33,11 +30,7 @@ import { Style } from 'react-style-tag';
 import Rating from '@mui/material/Rating'
 
 import Slider from 'react-slick';
-
-// import { useDispatch } from 'react-redux';
-// import {addItem, delItem} from '../../../../redux/actions/index'
-
-
+import data from '../../../../data';
 
 
 
@@ -88,21 +81,6 @@ const minus = () => {
     fade: false,
     arrow: false
   };
-
-  // const [CartBtn, setCartBtn] = useState("Add to cart")
-
-  // const dispatch = useDispatch()
-
-  // const handleCart = (product) => {
-  //     if (CartBtn === "Add to Cart") {
-  //         dispatch(addItem(product))
-  //         setCartBtn("Remove from Cart")
-  //     }
-  //     else{
-  //         dispatch(delItem(product))
-  //         setCartBtn("Add to Cart")
-  //     }
-  // }
 
 
   return (
@@ -167,43 +145,6 @@ const minus = () => {
 
 
 
-              {/* <div className={classes.detailsPage_product_TextHolder_productSize}>
-                <span>SIZE:</span>
-            
-                <ul className={classes.detailsPage_product_TextHolder_productSize_list}>
-                  <li className={classes.detailsPage_product_TextHolder_productSize_list_inline_item}> 
-                    <a className={`${activeSize===0 ? 'active':''}`} onClick={()=>isActive(0)}>L</a>
-                  </li>
-
-                  <li className={classes.detailsPage_product_TextHolder_productSize_list_inline_item}> 
-                  <a className={`tag ${activeSize===1 ? 'active':''}`} onClick={()=>isActive(1)}>M</a>
-                  </li>
-
-                  <li className={classes.detailsPage_product_TextHolder_productSize_list_inline_item}> 
-                  <a className={`tag ${activeSize===2 ? 'active':''}`} onClick={()=>isActive(2)}>S</a>       
-                  </li>
-
-                  <li className={classes.detailsPage_product_TextHolder_productSize_list_inline_item}> 
-                  <a className={`tag ${activeSize===3 ? 'active':''}`} onClick={()=>isActive(3)}>XL</a>                   
-                  </li>
-
-                  <li className={classes.detailsPage_product_TextHolder_productSize_list_inline_item}> 
-                  <a className={`tag ${activeSize===4 ? 'active':''}`} onClick={()=>isActive(4)}>XXL</a>                 
-                  </li>
-                  
-                </ul>
-                
-
-                <ul className={classes.detailsPage_product_TextHolder_productSize_color}>
-                <li className={classes.detailsPage_product_TextHolder_productSize_color_list}> Color:</li>
-                  <li className={classes.detailsPage_product_TextHolder_productSize_color_item}>
-
-                  </li>
-
-
-                </ul>
-              </div> */}
-
               <div className={classes.detailsPage_product_TextHolder_addCartSection}>
                 <div className={classes.detailsPage_product_TextHolder_addCartSection_counterSec}>             
                  <button className={classes.detailsPage_product_TextHolder_addCartSection_counterSec_decrement} onClick={minus}>-</button>
@@ -212,11 +153,8 @@ const minus = () => {
                 </div>
 
                 <NavLink  to={"/pages"} className={classes.detailsPage_product_TextHolder_addCartSection_btn }>
-               <button>
-
+                Add To Cart 
                 <FaArrowRight />
-               </button>
-
          
                 </NavLink>
 
@@ -412,7 +350,9 @@ const minus = () => {
     
     </div>
 
-    <div className={classes.container}>       
+
+
+      <div className={classes.container}>       
       <section className={classes.productRow}>
         <div className={classes.productRow_header}>
           <h1 className={classes.productRow_header_title}>Related products</h1>
@@ -428,22 +368,19 @@ const minus = () => {
         </div>
         <div className={classes.productRow_bottom}>
 
-        <div className={classes.productRow_bottom_item}>
-        <Product  className={Style.sale} tag="sale"/>     
-        </div>
-        {/* <div className={classes.productRow_bottom_item}>
-        <Product />
-        </div>
-        <div className={classes.productRow_bottom_item}>
-        <Product className={Style.hot} tag="hot"/>
-        </div>
-        <div className={classes.productRow_bottom_item}>
-        <Product  className={Style.sale} tag="sale"/>
-        </div> */}
-       
+        {data.productData_3.map((item,index)=>{
+            return(
+              <div className={classes.productRow_bottom_item}>
+
+                <Product img={item.img} title={item.title} price={item.price} oldprice={item.oldprice}  key={index}/>
+                 </div>
+            )
+
+          })}
+
         </div>
       </section>
-      </div >
+      </div>
 
 
     <div className={classes.container}>       

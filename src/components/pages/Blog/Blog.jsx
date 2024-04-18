@@ -18,7 +18,6 @@ const Blog = () => {
     <div>
 
 <section className={classes.introBannerHolder }>
-      <div className={classes.container}>
       <div className={classes.introBannerHolder_listingPage}>
           <img src={img7} alt="image" className={classes.introBannerHolder_listingPage_img}/>
           
@@ -40,6 +39,9 @@ const Blog = () => {
             
             
           </div>
+          
+          <div className={classes.container}>
+
 
           <div className={classes.listingData}>
           <div className={classes.listingData_row}>
@@ -51,8 +53,6 @@ const Blog = () => {
 
             <div className={classes.listingData_row_rightContent}>
 
-  
-
             <div className={classes.dealSecHolder_dealSlider }>
                 <div className={classes.dealSecHolder_dealSlider_prodSlider_item}>
                   <BlogProduct />
@@ -60,7 +60,6 @@ const Blog = () => {
 
               </div>
 
-            
 
             </div>
 

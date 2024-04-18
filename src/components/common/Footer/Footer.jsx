@@ -1,26 +1,20 @@
 import React from 'react'
 import classes from "./footer.module.scss"
-
-// import { BsDiscord } from 'react-icons/bs'
 import { Link } from 'react-router-dom';
 import { MdOutlineLocationOn } from "react-icons/md";
 import { FiPhone } from "react-icons/fi";
 import { MdOutlineEmail } from "react-icons/md";
-
 import { FaTwitter } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 import { FaPinterest } from "react-icons/fa";
 import { IoLogoGoogleplus } from "react-icons/io";
 
-// import playstore from '../assets/images/pay/play.jpg'
-// import appstore from '../assets/images/pay/app.jpg'
-// import visa from '../assets/images/pay/pay.png'
 
 const footer = () => {
   return <>
-{/* <footer className={classes.footer}>
 
   <div className={classes.container}>
+<footer className={classes.footer}>
     <div className={classes.footer_row}>
       <div className={classes.footer_row_part1}>
       <div className={classes.footer_row_part1_col}>
@@ -98,8 +92,8 @@ const footer = () => {
     <p>Coppyright 2019 by Botanical Store - All right reserved</p>
   </div>
 
+</footer>
 </div>
-</footer> */}
   
   </>
 }

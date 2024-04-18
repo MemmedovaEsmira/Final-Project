@@ -43,7 +43,6 @@ const About = () => {
   return (
     <div>
       
-      <div className={classes.container}>
       <section className={classes.introBannerHolder }>
       <div className={classes.introBannerHolder_listingPage}>
           <img src={img7} alt="image" className={classes.introBannerHolder_listingPage_img}/>
@@ -67,7 +66,6 @@ const About = () => {
           </div>
 
       </section>
-      </div>
 
       <div className={classes.container}>
       <section className={classes.abtSecHolder}>
@@ -249,7 +247,7 @@ const About = () => {
         
                   <div className={classes.NewsPostColumn_bottom_item_info}>           
                     <span class={classes.NewsPostColumn_bottom_item_info_sharing_name}>
-                      <Link className={classes.link} to="/shop"> REDIKIEL</Link>////shop?////
+                      <Link className={classes.link} to="/shop"> REDIKIEL</Link>
                     </span>
                     <p className={classes.NewsPostColumn_bottom_item_info_job}>Co - Founder & CEO</p>
         
@@ -267,7 +265,7 @@ const About = () => {
         
                   <div className={classes.NewsPostColumn_bottom_item_info}>           
                     <span class={classes.NewsPostColumn_bottom_item_info_sharing_name}>
-                      <Link className={classes.link} to="/shop"> ANGELA</Link>////shop?////
+                      <Link className={classes.link} to="/shop"> ANGELA</Link>
                     </span>
                      <p className={classes.NewsPostColumn_bottom_item_info_job}>Chief Of Marketing Team</p>
          
@@ -285,7 +283,7 @@ const About = () => {
         
                   <div className={classes.NewsPostColumn_bottom_item_info}>           
                     <span class={classes.NewsPostColumn_bottom_item_info_sharing_name}>
-                      <Link className={classes.link} to="/shop"> KEVIN LEE</Link>////shop?////
+                      <Link className={classes.link} to="/shop"> KEVIN LEE</Link>
                     </span>
                      <p className={classes.NewsPostColumn_bottom_item_info_job}>Art Director</p>
          
@@ -333,26 +331,3 @@ const About = () => {
 
 export default About
 
-
-// import React from 'react'
-// // import Menu from "../../menu/menu"
-// import Languageoption from "../../language-dropdown"
-// import {useTranslation} from 'react-i18next'
-// import i18next from "i18next"
-
-// const About = () => {
-//   const {t} = useTranslation();
-//     const handleClick=(e)=>{
-//         i18next.changeLanguage(e.target.value)
-//     }
-
-//   return (
-//       <div>
-//             {/* <Menu/> */}
-//             <Languageoption onChange={(e)=> handleClick(e)}/>
-//             <h1>{t('welcome')} {t('about')} || Seema {t('holiday')} Developer</h1>
-//         </div>
-//   )
-// }
-
-// export default About

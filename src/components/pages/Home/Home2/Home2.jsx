@@ -15,12 +15,6 @@ import { ImGift } from "react-icons/im";
 import { PiRecycleLight } from "react-icons/pi";
 import { IoCallOutline } from "react-icons/io5";
 import signature from "../../../../assets/images/signature.png"
-// import img21 from "../../../../assets/images/img21.jpg"
-// import img22 from "../../../../assets/images/img22.jpg"
-// import img23 from "../../../../assets/images/img23.jpg"
-// import img24 from "../../../../assets/images/img24.jpg"
-// import img25 from "../../../../assets/images/img25.jpg"
-
 import img30 from "../../../../assets/images/img30.jpg"
 import img31 from "../../../../assets/images/img31.jpg"
 import img32 from "../../../../assets/images/img32.jpg"
@@ -37,19 +31,6 @@ import data from '../../../../data';
 
 
 const Home = () => {
-
-  // let settings = {
-  //   dots: true,
-  //   infinite: true,
-  //   speed: 500,
-  //   slidesToShow: 5,
-  //   slidesToScroll: 1,
-  //   fade: false,
-  //   arrow: 0
-  // };
-
-
-  
 
   return (
     <>
@@ -171,17 +152,6 @@ const Home = () => {
 
           })}
 
-       
-        {/* <div className={classes.productRow_bottom_item}>
-        <Product />
-        </div>
-        <div className={classes.productRow_bottom_item}>
-        <Product className={Style.hot} tag="hot"/>
-        </div>
-        <div className={classes.productRow_bottom_item}>
-        <Product  className={Style.sale} tag="sale"/>
-        </div> */}
-       
         </div>
       </section>
       </div>
@@ -215,19 +185,6 @@ const Home = () => {
 
           })}
 
-        {/* <div className={classes.productRow_bottom_item}>
-        <Product  className={Style.sale} tag="sale"/>
-        </div>
-        <div className={classes.productRow_bottom_item}>
-        <Product />
-        </div>
-        <div className={classes.productRow_bottom_item}>
-        <Product className={Style.hot} tag="hot"/>
-        </div>
-        <div className={classes.productRow_bottom_item}>
-        <Product  className={Style.sale} tag="sale"/>
-        </div> */}
-       
         </div>
       </section>
       </div>

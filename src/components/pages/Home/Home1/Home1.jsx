@@ -3,23 +3,12 @@ import Product from '../../../product/product';
 import PartnerSlider from '../../../PartnerSlider/PartnerSlider';
 import Slider from 'react-slick'
 import SliderBanner from './slider/index';
-
 import classes from "./home1.module.scss"
 import classNames from 'classnames';
 import img1 from "../../../../assets/images/img1.jpg"
 import img2 from "../../../../assets/images/hbdr.png"
 import img3 from "../../../../assets/images/ad1.jpg"
 import img4 from "../../../../assets/images/ad2.jpg"
-
-// import img5 from "../../../assets/images/p-logo1.png"
-// import img6 from "../../../assets/images/p-logo2.png"
-// import img7 from "../../../assets/images/p-logo3.png"
-// import img8 from "../../../assets/images/p-logo4.png"
-// import img9 from "../../../assets/images/p-logo5.png"
-// import img10 from "../../../assets/images/p-logo6.png"
-
-
-
 import { PiPottedPlant } from "react-icons/pi";
 import { PiCactusLight } from "react-icons/pi";
 import { GiCactusPot } from "react-icons/gi";
@@ -286,11 +275,11 @@ const Home = () => {
 
           <Slider {...settings} className={classes.dealSecHolder_dealSlider_prodSlider}>
 
-          {data.productData_2.map((item,index)=>{
+          {data.productData_2.map((item,id)=>{
             return(
               <div className={classes.dealSecHolder_dealSlider_prodSlider_item}>
 
-                <Product img={item.img} title={item.title} price={item.price} oldprice={item.oldprice} key={index}/>
+                <Product img={item.img} title={item.title} price={item.price} oldprice={item.oldprice} key={id}/>
                  </div>
             )
 

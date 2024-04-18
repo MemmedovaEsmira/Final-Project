@@ -25,7 +25,6 @@ const Listing = () => {
   return (
     <>
     <section className={classes.introBannerHolder }>
-      <div className={classes.container}>
 
         <div className={classes.introBannerHolder_listingPage}>
           <img src={img7} alt="image" className={classes.introBannerHolder_listingPage_img}/>
@@ -47,6 +46,7 @@ const Listing = () => {
             
             
           </div>
+          <div className={classes.container}>
 
         <div className={classes.listingData}>
           <div className={classes.listingData_row}>
@@ -80,7 +80,9 @@ const Listing = () => {
           } 
 
             </div>
-            <p >Showing 1-9 of <span > 24{/* {data.length} */} </span> results</p>
+            <p >Showing 1-9 of <span > 24
+              {/* {data.length} */}
+               </span> results</p>
 
 
             <div className={classes.listingData_row_rightContent_topStrip_tab}>
@@ -133,50 +135,6 @@ const Listing = () => {
           })}
 
 
-                {/* <div className={classes.dealSecHolder_dealSlider_prodSlider_item}>
-                  <Product />
-                </div>
-
-                <div className={classes.dealSecHolder_dealSlider_prodSlider_item}>
-                  <Product />
-                </div>
-
-                <div className={classes.dealSecHolder_dealSlider_prodSlider_item}>
-                  <Product />
-                </div>
-
-                <div className={classes.dealSecHolder_dealSlider_prodSlider_item}>
-                  <Product />
-                </div>
-
-                <div className={classes.dealSecHolder_dealSlider_prodSlider_item}>
-                  <Product />
-                </div>
-
-                <div className={classes.dealSecHolder_dealSlider_prodSlider_item}>
-                  <Product />
-                </div>
-
-                <div className={classes.dealSecHolder_dealSlider_prodSlider_item}>
-                  <Product />
-                </div>
-
-                <div className={classes.dealSecHolder_dealSlider_prodSlider_item}>
-                  <Product />
-                </div>
-
-                <div className={classes.dealSecHolder_dealSlider_prodSlider_item}>
-                  <Product />
-                </div>
-
-                <div className={classes.dealSecHolder_dealSlider_prodSlider_item}>
-                  <Product />
-                </div>
-
-                <div className={classes.dealSecHolder_dealSlider_prodSlider_item}>
-                  <Product />
-                </div> */}
-
                
 
               </div>
@@ -198,6 +156,8 @@ const Listing = () => {
 
 
     </section>
+
+    
 
     <div className={classes.container}>       
       <section className={classes.newsLetterSection}>

@@ -1,7 +1,6 @@
 import React from 'react';
 import "./index.css";
 import Slider from 'react-slick';
-// import "../../../../../node_modules/react-slick"
 import Slide1 from "../../../../../assets/images/slider-1.png";
 import Slide2 from "../../../../../assets/images/slider-2.png"
 import Slide3 from "../../../../../assets/images/slider-3.png"
@@ -10,7 +9,6 @@ import { FaArrowRight } from "react-icons/fa";
 
 
 import { NavLink } from 'react-router-dom';
-// import classNames from 'classnames';
 
 
 const HomeSlider = () => {
@@ -29,7 +27,6 @@ const HomeSlider = () => {
   return (
     <div>
       <section className="homeSlider">
-        {/* <div className="container"> */}
         <Slider {...settings} className='home_slider_Main'>
 
       
@@ -119,7 +116,7 @@ const HomeSlider = () => {
 
       
     </Slider>
-        {/* </div> */}
+
       </section>
 
 
@@ -128,10 +125,6 @@ const HomeSlider = () => {
       <section className='cartSliderSection'>
         <div className='container'>
 
-          {/* <partnerSlider {...settings} className="cart_slider_main">
-         <div className='item'>
-          
-         </div> */}
           <partnerSlider/>
         </div>
 

@@ -6,7 +6,7 @@ import { FaArrowRight } from "react-icons/fa";
 import img7 from "../../../assets/images/b-bg7.jpg";
 import img2 from "../../../assets/images/hbdr.png";
 
-import CartItem from "../../CartItem/CartItem"
+import CartItem from "../../CartItem/CartItem";
 
 
 
@@ -24,7 +24,6 @@ const Pages = () => {
     <div>
 
 <section className={classes.introBannerHolder }>
-      <div className={classes.container}>
       <div className={classes.introBannerHolder_listingPage}>
           <img src={img7} alt="image" className={classes.introBannerHolder_listingPage_img}/>
           
@@ -48,9 +47,7 @@ const Pages = () => {
             </ul>
             </div>
             
-            
-          </div>
-
+          
       </div>
       </section>
    
@@ -60,16 +57,16 @@ const Pages = () => {
   <div className={classes.container}>
   <div className={classes.row}>
       {cart?.list && cart?.list?.length > 0 ? (
-          <div>
-              <header>
-                  <tr>
-                      <th>Name</th>
+          <div className={classes.header}>
+                  <tr className={classes.header_info}>
+                      <th>Product</th>
                       <th>Price</th>
                       <th>Quantity</th>
                       <th>Total</th>
                       <th>Action</th>
                   </tr>
-              </header>
+                  <hr />
+
               <div >
                   {
                       cart?.list.map(item => {
@@ -82,8 +79,8 @@ const Pages = () => {
                       })
                   }
                   <tr>
-                      <td colSpan={3}>Total:</td>
-                      <td colSpan={1}>{cart?.total}$</td>
+                      <td>Total:</td>
+                      <td >{cart?.total}$</td>
                       <td></td>
                   </tr>
               </div>
@@ -91,6 +88,7 @@ const Pages = () => {
       ) : <h1>Empty</h1>}
   </div >
 </div>
+
 
       <div className={classes.container}>       
       <section className={classes.newsLetterSection}>

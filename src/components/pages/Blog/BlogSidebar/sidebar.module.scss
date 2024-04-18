@@ -1,9 +1,6 @@
   .link{
     text-decoration: none;
     color: #707070;
-    // font-size: 15px;
-    // line-height: 17px;
-    // font-weight: bold;/
   }
   
   .link:hover{
@@ -11,13 +8,11 @@
     }
 
 .sidebar{
-    // position: sticky;
-    // top: 110px;
+
     width: 250px;
     
     &_card{
         margin-top: 0px;
-        // padding: 5px; 
         border-radius: 10px !important; 
         margin-bottom: 40px;
         
@@ -29,7 +24,6 @@
             letter-spacing: 1px;
             position: relative;
             padding-bottom: 20px; 
-            // margin-bottom: 30px;
             
         }
         

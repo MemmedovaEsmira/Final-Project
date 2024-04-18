@@ -65,9 +65,6 @@
             padding: 25px;
             display: flex;
             align-items: end;
-
-
-
             justify-content: center;
             opacity: 0;
             transform: scale(0.8);
@@ -116,10 +113,7 @@
             }
             &_list:hover{
                 position: absolute;
-                // bottom: -50px;
                 transition: all 0.5s linear;
-                // display: block;
-                // background-color: #5ba515;
 
             }
         }
@@ -186,4 +180,39 @@
     //     opacity: 1;
     //     transform: scale(1);
     //  }
+}
+
+@media only screen and (min-width:320px) and (max-width:992px){
+
+    .container{
+        padding: 0 40px;
+        width: 100%;
+    }
+
+    .productThumb{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        
+        &_imgWrapper{
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+
+
+            &_overlay{
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+
+            }
+        }
+    }
+
 }

@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-import { FaTrashAlt } from "react-icons/fa"
 import { useDispatch } from "react-redux"
 import { removeItem, updatePrice } from "../../redux/slice/CartSlice"
 import data from "../../data"
@@ -11,7 +10,7 @@ export default function CartItem({data}) {
     const dispatch = useDispatch()
 
     const [quantity, setQuantity] = useState(data?.quantity)
-    const [totalPrice, setTotalPrice] = useState(+data?.price * +data?.quantity)
+    const [totalPrice, setTotalPrice] = useState(data?.price * + data?.quantity)
 
     const handleChange = (e) => {
         const value = parseInt(e.target.value) > 0 ? parseInt(e.target.value) : 1
@@ -29,10 +28,10 @@ export default function CartItem({data}) {
     }, [quantity, data?.price, data?.id, dispatch])
 
     return(
-        <tr>
+        <tr className={classes.cartItem}>
            <td>
                 <span>
-                    <img src={data.img} alt="" /> 
+                    <img className={classes.img} src={data.img} alt="" /> 
                     <p>{data.name}</p>
                 </span>
             </td> 
@@ -46,7 +45,7 @@ export default function CartItem({data}) {
                             setQuantity(pre => pre - 1)
                         }
                     }}>-</button>
-                    <input type="number" value={quantity} className={classes.input} onChange={handleChange} />
+                    <input type="number" value={data?.quantity} className={classes.input} onChange={handleChange} />
                     <button className={classes.changeBtn} onClick={() => setQuantity(pre => pre + 1)}>+</button>
                 </span>
             </td>
@@ -54,7 +53,7 @@ export default function CartItem({data}) {
                 {totalPrice}$
             </td>
             <td>
-                <button className={classes.btnt} onClick={handleRemove}><FaTrashAlt /></button>
+                <button className={classes.btn} onClick={handleRemove}> X </button>
             </td>
         </tr>
     )

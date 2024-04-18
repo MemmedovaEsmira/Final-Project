@@ -4,7 +4,6 @@ import classes from "./header.module.scss";
 import classNames from 'classnames';
 import { Link, NavLink } from 'react-router-dom';
 import logo from "../../../assets/images/logo.png"
-import { VscMenu } from "react-icons/vsc";
 import { TfiSearch } from "react-icons/tfi";
 import { CiHeart } from "react-icons/ci";
 import { TiShoppingCart } from "react-icons/ti";
@@ -15,7 +14,6 @@ import {useTranslation} from 'react-i18next'
 import i18next from "i18next";
 
 
-import { IoMdMenu } from "react-icons/io";
 import { useSelector } from 'react-redux';
 
 
@@ -44,12 +42,25 @@ const {list} = useSelector(state => state.cart)
     <>
     <div className={classes.container}>
     <header className={classes.header}>
+    <div className={classes.header_logo}>
+      <NavLink to={"/"} className={classNames(classes["header_menu_item--link"])}>
+       <img src={logo} alt="logo"/>
+      </NavLink>
+     </div>
     <div className={classes.header_icons}>
-    <VscMenu />
       <Languageoption onChange={(e)=> handleClick(e)}/>
     </div>
 
   <div className={classes.header_menu}>
+
+
+  <div className={classes.header_menu_item}>
+      <NavLink to={"/login"} className={classNames(classes["header_menu_item--link"])}>
+       Login
+      </NavLink>
+     </div>
+
+
       <div className={classes.header_menu_item}>
        <NavLink to={"/"} className={classNames(classes["header_menu_item--link"])}
          onClick={() => setisOpenDropDown(!isOpenDropDown)}> Home </NavLink>
@@ -60,7 +71,6 @@ const {list} = useSelector(state => state.cart)
        <span className={classes.header_menu_item_dropdown}>
           <Link className={classes.link} to={"/"}>  <p className={classes.header_menu_item_dropdown_li} onClick={() => setisOpenDropDown(false)}>Home 1 </p></Link>
           <Link className={classes.link} to={"/Home2"}>  <p className={classes.header_menu_item_dropdown_li} onClick={() => setisOpenDropDown(false)}>Home 2 </p></Link>
-          <Link className={classes.link} to={"/Home3"}>  <p className={classes.header_menu_item_dropdown_li} onClick={() => setisOpenDropDown(false)}>Home 3 </p></Link>
        </span>
       }
       </div>
@@ -94,14 +104,6 @@ const {list} = useSelector(state => state.cart)
         </span> 
     }    
     </div>
-
-
-      <div className={classes.header_menu_item}>
-      <NavLink to={"/"} className={classNames(classes["header_menu_item--link"])}>
-       <img src={logo} alt="logo"/>
-      </NavLink>
-      <div className={classes.navbarToggle}><IoMdMenu/></div>
-     </div>
 
   
   <div className={classes.header_menu_item}>
@@ -153,9 +155,14 @@ const {list} = useSelector(state => state.cart)
 <div className={classes.header_icons}>
 
      <TfiSearch />
-     <CiHeart />
 
+     <div className={classes.header_menu_item}>
+       <NavLink to={"/wishlists"} className={classNames(classes["header_menu_item--link"])}
+         onClick={() => setisOpenDropDown5(!isOpenDropDown5)}> <CiHeart/>
+          <span>{list?.length}</span>
+        </NavLink>
 
+    </div>  
 
       <div className={classes.header_menu_item}>
        <NavLink to={"/pages"} className={classNames(classes["header_menu_item--link"])}
@@ -163,7 +170,6 @@ const {list} = useSelector(state => state.cart)
           <span>{list?.length}</span>
         </NavLink>
 
-  
     </div>                  
 </div>
 

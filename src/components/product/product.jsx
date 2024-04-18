@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import classes from "./product.module.scss"
 import img2 from "../../assets/images/img2.jpg"
 import { Link, NavLink } from 'react-router-dom'
-import { IoMdHeartEmpty } from "react-icons/io";
+import { CiHeart } from "react-icons/ci";
 import { PiShoppingCartLight } from "react-icons/pi";
 import { SlEye } from "react-icons/sl";
 import { FaArrowRightArrowLeft } from "react-icons/fa6";
@@ -11,8 +11,12 @@ import data from "../../data";
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../../redux/slice/CartSlice';
 
-const product = ( props, {data}) => {
+
+
+const product = ( data) => {
   const dispatch = useDispatch()
+
+
 
   const handleAddToCart = () => {
     // console.log(data)
@@ -25,21 +29,26 @@ const product = ( props, {data}) => {
 
 
 
+
+
   return (
+    <div>
+
+ 
     <div className={classes.productThumb}>
 
-{
+{/* {
   props.tag!==null && props.tag!==undefined&&
 <span  className={`${classes.productThumb_badge} ${props.tag}`}>{props.tag}</span> 
-}
+} */}
       {/* <span  className={`classes.productThumb_badge ${props.tag}`}> HOT</span> */}
         <div className={classes.productThumb_imgWrapper}>
-          <img src={props.img} alt="" />
+          <img src={data.img} alt="" />
           <div className={classes.productThumb_imgWrapper_overlay}>
             <div className={classes.productThumb_imgWrapper_overlay_list}>
               <button className={classes.productThumb_imgWrapper_overlay_list_item}>
                 <Link className={classes.productThumb_imgWrapper_overlay_list_item_cursor}>
-                <IoMdHeartEmpty/>
+                <CiHeart/>
                 </Link>
               </button>
 
@@ -71,13 +80,14 @@ const product = ( props, {data}) => {
         <div className={classes.productThumb_info}>
           <NavLink  className={classes.productThumb_info_link} >
         <span className={classes.productThumb_info_title}>
-          {props.title}
+          {data.title}
          </span>
           </NavLink>
-        {/* <span className={classes.productThumb_info_oldprice}>80.00 $</span> */}
-        <span className={classes.productThumb_info_price}>{props.price}</span>
+        <span className={classes.productThumb_info_oldprice}>{data.oldprice}</span>
+        <span className={classes.productThumb_info_price}>{data.price}</span>
 
         </div>
+    </div>
     </div>
   )
 }

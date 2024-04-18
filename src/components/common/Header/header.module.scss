@@ -7,12 +7,6 @@
     padding: 0px 90px;
   }
 
-// li{
-//     list-style: none;
-//     text-decoration: none;
-//     color: green;
-
-// }
 
 .link{
     color: #666666;
@@ -23,7 +17,7 @@
 
 .header{
     width: 90%;
-    position: fixed;
+    // position: fixed;
     z-index: 10;
 
 
@@ -32,9 +26,7 @@
     justify-content: space-between;
     align-items: center;
     font-size: 14px;
-    // padding: 16px;
-    // text-decoration: none;
-    // color: green;
+
     &_menu{
         display: flex;
         padding: 16px;
@@ -47,16 +39,12 @@
         &_item{
             position: relative;
             color: #333333;
-            // padding: 10px 15px;
             cursor: pointer;
-            // font-size: 8px !important;
-            // line-height: 16px;
             font-weight: 700;
 
         
         
         &_dropdown{
-            // display: block;
             position: absolute;
             z-index: 10;
             top: 100%;
@@ -67,8 +55,7 @@
             font-weight: 600;
             border-top: 2px solid #5ba515;
             box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.06);
-            // visibility:  hidden;
-            ///////////////////
+
 
             &_li{
                 color: #444444;
@@ -97,11 +84,7 @@
         
     }
 
-    // &_item:hover{
-    //     top: 40px;
 
-    // }
-        
         &_item--link{
             text-decoration: none;
             text-transform: uppercase;
@@ -111,11 +94,7 @@
 
         }
 
-        // &_item--link :hover{
-        //     background-color: red;
-        //     padding-bottom: 50px;
-        //     // color: #5ba515;
-        // }
+
     }
     &_icons{
         display: flex;
@@ -147,70 +126,52 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.navbarToggle{
-    display: none;
-}
-
-
-
-
 @media only screen and (min-width:320px) and (max-width:992px){
 
+    // .container{
+    //     padding-right: 90px;
+    // }
     .header{
-        width: 100% !important;
-        height: 100%;
+        // width: 90% !important;
         display: flex;
-        justify-content: space-between;
-
+        flex-wrap: wrap;
+        justify-content:left;
+        top: 10px;
+        margin-left: 0px;
+        box-sizing: border-box;
+        
         
         &_menu{
+            font-size: 8px;
             width: 100% !important;
-            height: 100%;
-            position: fixed;
-            top: 0;
-            right: -100px;
-            // background-color: #fff;
-            z-index: 100;
-            display: grid;
-            
+            // position: fixed;
+            top: 15%;
+            display: flex;
+            flex-wrap: wrap;
+            text-align: left;
+            // align-items: center;
+
+
             &_item{
-                width: 100% !important;
+                // width: 8% !important;
                 margin: 0px !important;
                 text-align: left !important;
                 justify-content: flex-start !important;
-                // display: grid;
                 
                 &--link{
                     width: 100% !important;
-                    
-                    // height: 100%;
                     text-align: left !important;
                     display: flex !important;
                     align-items: center;
-
                     justify-content: space-between !important;
                     font-size: 14px;
                     font-weight: 700;
-                    padding: 10px 15px;
                     cursor: pointer;
 
                 }
 
                 &--link:hover{
+                    width: 100% !important;
                     background-color: #000;
                     color: #5ba515;
 
@@ -219,18 +180,8 @@
             }
         }
 
-        &_icons{
-            display: none;
-        }
-        
+
     }
 
-        .navbarToggle{
-            width: 60px;
-            height: 60px;
-            font-size: 30px;
-            display: contents;
-    
-        }
 
 }

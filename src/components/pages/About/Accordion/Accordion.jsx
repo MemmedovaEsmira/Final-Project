@@ -1,27 +1,26 @@
 import React,{useState} from 'react'
 import classes from "./accordion.module.scss";
-import { TiArrowSortedDown } from "react-icons/ti";
+import { TiArrowSortedDown, TiArrowSortedUp } from "react-icons/ti";
 
 
 
 const Accordion = (props) => {
-    const [active, setActive] = useState(false);
+    const [showInfo, setshowInfo] = useState(false);
 
   return (
     <>
-<div className={`classes.accordion ${active ? 'active' :''}`}>
+<div className={classes.accordion}>
 
-<div className={classes.accordion_title} onClick={() => setActive(active)}>
+<div className={classes.accordion_title} onClick={() => setshowInfo(!showInfo)}>
   <span>{props.title}</span>
-  <div className={classes.accordion_icon}>
-  <TiArrowSortedDown />
-  </div>
+  {showInfo ?  <TiArrowSortedDown /> :  <TiArrowSortedUp />}
 </div>
 
-
+{showInfo &&
 <div className={classes.accordion_content}>
   {props.content}
 </div>
+}
 
 </div>
       
