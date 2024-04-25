@@ -46,6 +46,7 @@ const data = {
             id: 1,
             img: img2,
             title: 'Sit voluptatem',
+            category: 'Cactus',
             price: 68.00 
 
         },
@@ -54,6 +55,7 @@ const data = {
             id: 2,
             img: img3,
             title: 'Neque Porro Quisquamest',
+            category: 'Plant',
             price: 60.50
 
         },
@@ -61,6 +63,7 @@ const data = {
             id: 3,
             img: img4,
             title: 'Pellentesque aliquet',
+            category: 'Floor',
             price: 68.00 
 
         },
@@ -68,6 +71,7 @@ const data = {
             id: 4,
             img: img5,
             title: 'Aspetur Autodit Autfugit',
+            category: 'Indoor',
             price: 66.00,
             oldprice: 80.00
 
@@ -76,6 +80,7 @@ const data = {
             id: 5,
             img: img6,
             title: 'Sit voluptatem',
+            category: 'Cactus',
             price: 70.50 
 
         },
@@ -83,6 +88,7 @@ const data = {
             id: 6,
             img: img7,
             title: 'Sint Incidunt Utlabore',
+            category: 'Green',
             price: 60.50,
             oldprice: 75.00
 
@@ -91,6 +97,7 @@ const data = {
             id: 7,
             img: img8,
             title: 'Aliquam Quaerat Voluptem',
+            category: 'Healthy',
             price: 58.00
 
         },
@@ -98,6 +105,7 @@ const data = {
             id: 8,
             img: img9,
             title: 'Neque Porro Quisquam',
+            category:   'House plant',
             price: 48.00,
             oldprice: 60.00  
 
@@ -106,6 +114,7 @@ const data = {
             id: 9,
             img: img10,
             title: 'Sit voluptatem',
+            category:  'Office tree',
             price: 65.00
 
         },
@@ -113,6 +122,7 @@ const data = {
             id: 10,
             img: img11,
             title: 'Aliquam Quaerat Voluptem',
+            category:  'Plant',
             price: 80.00 
 
         }
@@ -125,6 +135,7 @@ const data = {
             id: 11,
             img: img12,
             title: 'Sit voluptatem',
+            category: 'Floor', 
             price: 68.00 
 
         },
@@ -133,6 +144,7 @@ const data = {
             id: 12,
             img: img13,
             title: 'Neque Porro Quisquamest',
+            category: 'Indoor',
             price: 60.50
 
         },
@@ -140,6 +152,7 @@ const data = {
             id: 13,
             img: img14,
             title: 'Pellentesque aliquet',
+            category: 'Green',
             price: 68.00 
 
         },
@@ -147,6 +160,7 @@ const data = {
             id: 14,
             img: img15,
             title: 'Aspetur Autodit Autfugit',
+            category: 'Cactus',
             price: 66.00,
             oldprice: 80.00
 
@@ -155,6 +169,7 @@ const data = {
             id: 15,
             img: img16,
             title: 'Sit voluptatem',
+            category:  'Cactus' , 
             price: 70.50 
 
         },
@@ -166,6 +181,7 @@ const data = {
             id: 16,
             img: img17,
             title: 'Sit voluptatem',
+            category: 'Healthy',
             price: 68.00 
 
         },
@@ -174,6 +190,7 @@ const data = {
             id: 17,
             img: img18,
             title: 'Neque Porro Quisquamest',
+            category: 'House plant', 
             price: 60.50
 
         },
@@ -181,6 +198,7 @@ const data = {
             id: 18,
             img: img19,
             title: 'Pellentesque aliquet',
+            category: 'Office tree',
             price: 68.00 
 
         },
@@ -188,6 +206,7 @@ const data = {
             id: 19,
             img: img20,
             title: 'Aspetur Autodit Autfugit',
+            category: 'Cactus',
             price: 66.00,
             oldprice: 80.00
 
@@ -200,6 +219,7 @@ const data = {
             id: 20,
             img: img26,
             title: 'Sit voluptatem',
+            category:  'Cactus' , 
             price: 68.00 
 
         },
@@ -208,6 +228,7 @@ const data = {
             id: 21,
             img: img27,
             title: 'Neque Porro Quisquamest',
+            category: 'Plant',
             price: 60.50
 
         },
@@ -215,6 +236,7 @@ const data = {
             id: 22,
             img: img28,
             title: 'Pellentesque aliquet',
+            category: 'Floor', 
             price: 68.00 
 
         },
@@ -222,6 +244,7 @@ const data = {
             id: 23,
             img: img29,
             title: 'Aspetur Autodit Autfugit',
+            category:  'Indoor' ,  
             price: 66.00,
             oldprice: 80.00
 
@@ -235,6 +258,7 @@ const data = {
             id: 24,
             img: img41,
             title: 'Sit voluptatem',
+            category:  'Green',
             price: 68.00 
 
         },
@@ -243,6 +267,7 @@ const data = {
             id: 25,
             img: img42,
             title: 'Neque Porro Quisquamest',
+            category:  'Healthy',
             price: 60.50
 
         },
@@ -250,6 +275,7 @@ const data = {
             id: 26,
             img: img43,
             title: 'Pellentesque aliquet',
+            category:  'Green',
             price: 68.00 
 
         },
@@ -257,6 +283,7 @@ const data = {
             id: 27,
             img: img44,
             title: 'Aspetur Autodit Autfugit',
+            category:  'House plant', 
             price: 66.00,
             oldprice: 80.00
 
@@ -265,6 +292,7 @@ const data = {
             id: 28,
             img: img45,
             title: 'Sit voluptatem',
+            category: 'Office tree',
             price: 70.50 
 
         },
@@ -272,6 +300,7 @@ const data = {
             id: 29,
             img: img46,
             title: 'Sint Incidunt Utlabore',
+            category:  'House plant', 
             price: 60.50,
             oldprice: 75.00
 
@@ -280,6 +309,7 @@ const data = {
             id: 30,
             img: img47,
             title: 'Aliquam Quaerat Voluptem',
+            category: 'Office tree',
             price: 58.00
 
         },
@@ -287,6 +317,7 @@ const data = {
             id: 31,
             img: img48,
             title: 'Neque Porro Quisquam',
+            category: 'House plant', 
             price: 48.00,
             oldprice: 60.00  
 
@@ -295,6 +326,7 @@ const data = {
             id: 32,
             img: img49,
             title: 'Sit voluptatem',
+            category: 'Office tree',
             price: 65.00
 
         },
@@ -302,6 +334,7 @@ const data = {
             id: 33,
             img: img50,
             title: 'Sit voluptatem',
+            category:  'House plant', 
             price: 65.00
 
         },
@@ -309,6 +342,7 @@ const data = {
             id: 34,
             img: img51,
             title: 'Aliquam Quaerat Voluptem',
+            category:'Perennial flowers', 
             price: 80.00 
 
         },
@@ -316,6 +350,7 @@ const data = {
             id: 35,
             img: img52,
             title: 'Aliquam Quaerat Voluptem',
+            category:   'Office tree',
             price: 80.00 
 
         }

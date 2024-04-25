@@ -37,11 +37,6 @@ const product = ( data) => {
  
     <div className={classes.productThumb}>
 
-{/* {
-  props.tag!==null && props.tag!==undefined&&
-<span  className={`${classes.productThumb_badge} ${props.tag}`}>{props.tag}</span> 
-} */}
-      {/* <span  className={`classes.productThumb_badge ${props.tag}`}> HOT</span> */}
         <div className={classes.productThumb_imgWrapper}>
           <img src={data.img} alt="" />
           <div className={classes.productThumb_imgWrapper_overlay}>
@@ -53,13 +48,13 @@ const product = ( data) => {
               </button>
 
               <button className={classes.productThumb_imgWrapper_overlay_list_item}>
-                <NavLink  to={"/pages"} className={classes.productThumb_imgWrapper_overlay_list_item_cursor}>
+                <Link  to={"/pages"} className={classes.productThumb_imgWrapper_overlay_list_item_cursor}>
                 <PiShoppingCartLight  onClick={handleAddToCart} />  
-                </NavLink>
+                </Link>
               </button>
 
               <button className={classes.productThumb_imgWrapper_overlay_list_item}>
-                <Link className={classes.productThumb_imgWrapper_overlay_list_item_cursor}>
+                <Link  to={"/shop-details"} className={classes.productThumb_imgWrapper_overlay_list_item_cursor}>
                 <SlEye/>
                 </Link>
               </button>

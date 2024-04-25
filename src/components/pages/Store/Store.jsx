@@ -81,7 +81,6 @@ const Listing = () => {
 
             </div>
             <p >Showing 1-9 of <span > 24
-              {/* {data.length} */}
                </span> results</p>
 
 
@@ -108,18 +107,6 @@ const Listing = () => {
 
             </div>
 
-        {/* <div className='productRow pl-4 pr-3'>
-          {
-            data.length !== 0 &&
-            data.map((item, index) => {
-              return (
-                 <div className='item' key={index}>
-                  <Product tag={item.type} item={item} />
-                 </div>
-             )
-           })
-          }
-        </div> */}
 
               </div>
 

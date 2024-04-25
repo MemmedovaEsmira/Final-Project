@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import classes from "./sidebar.module.scss"
 import classNames from 'classnames';
-// import * as React from 'react';
 import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
-import img53 from "../../../../assets/images/img53.jpg"
+import img53 from "../../../../assets/images/img53.jpg";
+import productData from "../../../../data";
+
 
 function valuetext(value) {
   return `${value}°C`;
@@ -18,10 +19,18 @@ const Sidebar = () => {
     setValue(newValue);
   };
 
+  const [data,setData]=useState(productData)
+  const filterResult=(catItem)=>{
+    const result =productData.filter((curData)=>{
+      return curData.category===catItem;
+    });
+    setData(result);
+  }
+
   return (
     <>
       <div className={classes.sidebar}>
-                <div className={classes.sidebar_card}>
+              <div className={classes.sidebar_card}>
                     <h3 className={classes.sidebar_card_heading}>PRODUCT CATEGORIES</h3>
                     <div className={classes.sidebar_card_catList}>
 
@@ -43,7 +52,7 @@ const Sidebar = () => {
                      
 
                     </div>
-                </div>
+              </div>
 
 
               <div className={classes.sidebar_card}>
@@ -124,14 +133,14 @@ const Sidebar = () => {
                     <h3 className={classes.sidebar_card_heading}>PRODUCT TAGS</h3>
                     <ul className={classes.sidebar_card_tagNavList}>
 
-                      <li className={classes.sidebar_card_tagNavList_item}>Plant</li>
-                      <li className={classes.sidebar_card_tagNavList_item}>Floor</li>
-                      <li className={classes.sidebar_card_tagNavList_item}>Indoor</li>
-                      <li className={classes.sidebar_card_tagNavList_item}>Green</li>
-                      <li className={classes.sidebar_card_tagNavList_item}>Healthy</li>
-                      <li className={classes.sidebar_card_tagNavList_item}>Cactus</li>
-                      <li className={classes.sidebar_card_tagNavList_item}>House plant</li>
-                      <li className={classes.sidebar_card_tagNavList_item}>Office tree</li>
+                      <li className={classes.sidebar_card_tagNavList_item} onClick={()=>filterResult('Plant')}>Plant</li>
+                      <li className={classes.sidebar_card_tagNavList_item} onClick={()=>filterResult('Floor')}>Floor</li>
+                      <li className={classes.sidebar_card_tagNavList_item} onClick={()=>filterResult('Indoor')}>Indoor</li>
+                      <li className={classes.sidebar_card_tagNavList_item} onClick={()=>filterResult('Green')}>Green</li>
+                      <li className={classes.sidebar_card_tagNavList_item} onClick={()=>filterResult('Healthy')}>Healthy</li>
+                      <li className={classes.sidebar_card_tagNavList_item} onClick={()=>filterResult('Cactus')}>Cactus</li>
+                      <li className={classes.sidebar_card_tagNavList_item} onClick={()=>filterResult('House plant')}>House plant</li>
+                      <li className={classes.sidebar_card_tagNavList_item} onClick={()=>filterResult('Office tree')}>Office tree</li> 
 
                     </ul>
                 </div>
