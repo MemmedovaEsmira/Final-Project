@@ -186,30 +186,26 @@
 
     .container{
         padding: 0 40px;
-        width: 100%;
+        // width: 100%;
     }
 
     .productThumb{
         width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
+        height: 100%;
+        display: grid;
         
         &_imgWrapper{
             width: 100%;
             height: 250px;
             overflow: hidden;
-            position: relative;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-
-
-
-            &_overlay{
+            position: relative;      
+            
+            
+            &_overlay_list{
                 width: 100%;
                 display: flex;
                 flex-wrap: wrap;
+                position: absolute;
 
             }
         }

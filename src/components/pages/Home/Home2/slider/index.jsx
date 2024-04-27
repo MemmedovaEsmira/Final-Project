@@ -67,7 +67,7 @@ const HomeSlider = () => {
         <div className='item_img_5_info'>
 
           <h1 className='item_img_5_info_title'>NUTRIENTS PLANTS</h1>
-          <h1 className='item_img_5_info_year'>5019</h1>
+          <h1 className='item_img_5_info_year'>2019</h1>
           <span className='item_img_5_info_text'>OCCASSIONAL BOUQUET</span>
     
           <NavLink

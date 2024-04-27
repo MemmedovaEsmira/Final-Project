@@ -465,3 +465,98 @@ padding: 30px;
     }
   
   }
+
+
+
+  @media only screen and (min-width:320px) and (max-width:992px){
+    .container{
+      padding: 0 20px;
+  }
+  .detailsPage{
+    display: grid;
+    width: 100%;
+
+    &_product{
+      display: grid;
+      width: 100%;
+
+      &_TextHolder{
+        display: grid;
+        width: 100%;
+        
+        &_info{
+          width: 40%;
+        }
+
+        &_addCartSection{
+          width: 40%;
+
+        }
+
+        &_productInfoDetail{
+          width: 40%;
+        }
+      }
+      .socialNetwork{
+        display: grid;
+        width: 40%;
+
+      }
+      
+      &_SliderImage{
+        
+        img{
+          width: 80%;
+          height: 80%;
+        }
+      }
+      
+      &_imgSlider_item{
+      background-color: red;
+      display: grid;
+
+      img{
+
+        width:50px;
+        height:50px;
+      }
+
+    }
+    }
+    
+  }
+
+  .detailsPageTabs{
+    display: grid;
+
+    &_customTabs_list{
+      display: grid;
+    }
+  }
+
+    .newsLetterSection{
+      width: 100%;
+      margin: 80px 0;
+      padding: 10%;
+      height: auto;
+      display: grid;
+      text-align: center;
+      justify-content: center;
+      gap: 30px;
+  
+      &_title{
+        font-size: 20px;
+      }
+  
+      &_info{
+        font-size: 8px;
+      }
+  
+      &_banner{
+        width: 300px;
+      }
+    }
+  
+  
+  }
+  

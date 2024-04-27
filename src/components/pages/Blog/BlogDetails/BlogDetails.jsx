@@ -76,7 +76,7 @@ const BlogDetails = () => {
                                   <span className={classes.newsBlogColumn_bottom_item_info_sharing}>
                                       Post by: 
                                       <span class={classes.newsBlogColumn_bottom_item_info_sharing_name}>
-                                        <Link className={classes.link} to="/shop"> Jane doe</Link>////shop?////
+                                        <Link className={classes.link} to="/shop"> Jane doe</Link>
                                       </span>
 
                                  </span>
